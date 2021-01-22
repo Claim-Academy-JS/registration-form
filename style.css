@@ -23,6 +23,10 @@ button {
   border-radius: 4px;
 }
 
+input:focus {
+  outline: none;
+}
+
 button {
   background-color: #007300;
   border: none;
