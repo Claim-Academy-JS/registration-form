@@ -16,6 +16,7 @@ div {
 
 input {
   padding: 2px;
+  width: 100%;
 }
 
 input,
@@ -48,13 +49,14 @@ button:hover {
 }
 
 .card {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 1px 1px 0.5rem 0.25rem rgba(255, 218, 135, 0.5);
   display: flex;
   flex-direction: column;
 
   /* top/bottom 0, and left/right automatically centered */
-  margin: 0 auto;
-  max-width: 480px;
+  margin: 10vmin auto;
+  max-width: 320px;
   padding: 1rem;
 }
 
