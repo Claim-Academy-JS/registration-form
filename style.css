@@ -28,36 +28,65 @@ input:focus {
   outline: none;
 }
 
-button {
+button[type="submit"] {
   background-color: #007300;
-  border: none;
   color: whitesmoke;
-  margin-top: 1rem;
   max-width: 96px;
+}
+
+button {
+  background: none;
+  border: none;
   padding: 0.5rem;
 
   /* Transition all properties over 0.2s using an 'ease' timing function. */
   transition: all 0.2s ease;
 }
 
-/* 'hover' and 'focus' should be used together for accessibility ♿ */
+button,
+button[type="submit"]:focus,
+button[type="submit"]:hover {
+  color: #000;
+}
+
 button:focus,
-button:hover {
-  background-color: #00e36c;
+button:hover,
+button[type="submit"]:focus,
+button[type="submit"]:hover {
   color: #333;
   cursor: pointer;
+}
+
+/* 'hover' and 'focus' should be used together for accessibility ♿ */
+button[type="submit"]:focus,
+button[type="submit"]:hover {
+  background-color: #00e36c;
 }
 
 .card {
   background: rgba(255, 255, 255, 0.75);
   box-shadow: 1px 1px 0.5rem 0.25rem rgba(255, 218, 135, 0.5);
-  display: flex;
-  flex-direction: column;
 
   /* top/bottom 0, and left/right automatically centered */
   margin: 10vmin auto;
   max-width: 320px;
   padding: 1rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex--align-center {
+  align-items: center;
+}
+
+.flex--column {
+  flex-direction: column;
+}
+
+.flex--justify-between {
+  justify-content: space-between;
 }
 
 .rounded {

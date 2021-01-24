@@ -16,7 +16,7 @@
   <body>
     <h1>Registration Form</h1>
 
-    <form class="card rounded">
+    <form class="card flex flex--column rounded">
       <div>
         <!-- 'for' attribute should match up with an id attribute for the corresponding input -->
         <label class="screen-reader-text" for="fname">First Name:</label>
@@ -48,7 +48,10 @@
         <input type="tel" id="phone" placeholder="☎️" />
       </div>
 
-      <button type="submit">Register!</button>
+      <div class="flex flex--align-center flex--justify-between">
+        <button type="submit">Register!</button>
+        <button>Already have an account?</button>
+      </div>
     </form>
 
     <script src="./scripts.js" type="module"></script>
