@@ -7,4 +7,7 @@
  * 1.
  */
 const toggleBtn = document.querySelector("#toggle-btn");
-console.log(toggleBtn);
+
+toggleBtn.addEventListener("click", () => {
+  console.log("I was clicked!");
+});
