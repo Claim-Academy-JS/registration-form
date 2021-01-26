@@ -12,5 +12,11 @@ const toggleBtn = document.querySelector("#toggle-btn");
 console.log(submitBtn);
 
 toggleBtn.addEventListener("click", function () {
-  this.textContent = "Need to create an account?";
+  if (this.innerText === "Already have an account?") {
+    this.innerText = "Need to create an account?";
+    submitBtn.innerText = "Login!";
+  } else {
+    this.innerText = "Already have an account?";
+    submitBtn.innerText = "Register!";
+  }
 });
