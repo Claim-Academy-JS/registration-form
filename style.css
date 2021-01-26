@@ -124,3 +124,12 @@ button[type="submit"]:hover {
   width: auto;
   z-index: 100000; /* Above WP toolbar. */
 }
+
+/* JS 'State' Classes */
+.is-hidden {
+  display: none;
+}
+
+.is-visible {
+  display: initial;
+}
