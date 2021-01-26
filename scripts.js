@@ -4,10 +4,10 @@
  */
 
 /**
- * 1.
+ * When the toggleBtn is clicked, hide all the inputs except for username and password
  */
 const toggleBtn = document.querySelector("#toggle-btn");
 
-toggleBtn.addEventListener("click", () => {
-  console.log("I was clicked!");
+toggleBtn.addEventListener("click", function () {
+  this.textContent = "Need to create an account?";
 });
