@@ -1,15 +1,12 @@
 /**
- * TODO: When we click 'Already,' then all fields should be hidden EXCEPT
- * 'username' and 'password.'
- */
-
-/**
  * When the toggleBtn is clicked, hide all the inputs except for username and password
  */
 const submitBtn = document.querySelector('button[type="submit"]');
 const toggleBtn = document.querySelector("#toggle-btn");
 
-console.log(submitBtn);
+const toggledInputs = document.querySelectorAll("input:not(#uname, #password)");
+
+console.log(toggledInputs, "hi");
 
 toggleBtn.addEventListener("click", function () {
   if (this.innerText === "Already have an account?") {
