@@ -16,6 +16,8 @@ div {
 
 input {
   padding: 2px;
+
+  /* 100% of the parent's width */
   width: 100%;
 }
 
@@ -44,6 +46,8 @@ button {
 }
 
 button,
+
+/* Attribute Selectors */
 button[type="submit"]:focus,
 button[type="submit"]:hover {
   color: #000;
