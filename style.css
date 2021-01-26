@@ -69,9 +69,11 @@ button[type="submit"]:hover {
 
 .card {
   background: rgba(255, 255, 255, 0.75);
-  box-shadow: 1px 1px 0.5rem 0.25rem rgba(255, 218, 135, 0.5);
 
-  /* top/bottom 0, and left/right automatically centered */
+  /* x-offset y-offset blur radius */
+  box-shadow: 1px 1px 10vmax 0.25rem rgba(255, 218, 135, 0.5);
+
+  /* top/bottom 10% of the whichever viewport is the minimum (portait/landscape) */
   margin: 10vmin auto;
   max-width: 320px;
   padding: 1rem;
