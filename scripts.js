@@ -1,9 +1,10 @@
 const submitBtn = document.querySelector('button[type="submit"]');
 const toggleBtn = document.querySelector("#toggle-btn");
 
-const toggledInputs = document.querySelectorAll("input:not(#uname, #password)");
-
-// TODO: Iterate over all toggledInputs and add the 'is-hidden' class
+const toggledInputs = Array.from(document.querySelectorAll("input")).slice(
+  0,
+  4
+);
 
 toggleBtn.addEventListener("click", function () {
   if (this.innerText === "Already have an account?") {
