@@ -134,8 +134,16 @@ button[type="submit"]:hover {
 }
 
 /* JS 'State' Classes */
+.is-error {
+  border: solid thin red;
+}
+
 .is-hidden {
   display: none;
+}
+
+.is-valid {
+  border: solid 2px green;
 }
 
 .is-visible {
