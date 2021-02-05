@@ -58,7 +58,8 @@ toggleBtn.addEventListener("click", toggleFormInfo);
 document.querySelector("form").addEventListener("submit", (e) => {
   e.preventDefault();
 
-  inputs.forEach((input) => {
+  // TODO: Figure how to separate out the inputs that are in 'div.is-hidden'
+  Array.from(inputs).forEach((input) => {
     if (!input.value.length) {
       input.nextElementSibling?.classList.add("is-visible");
     }
