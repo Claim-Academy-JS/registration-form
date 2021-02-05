@@ -55,9 +55,6 @@ inputs.forEach((input) => {
 
 toggleBtn.addEventListener("click", toggleFormInfo);
 
-/**
- * Upon submission {fname: "am", lname: "al"}
- */
 document.querySelector("form").addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -67,13 +64,13 @@ document.querySelector("form").addEventListener("submit", (e) => {
     }
   });
 
-  // Only proceed with 'submission' if there are no 'error p'
+  // Only proceed with 'submission' if there are no 'error ps'
   if (
     !e.target.querySelector(
       // CSS Selector for a p with '.is-visible' if it's immediately after an 'input'
       "input + p.is-visible"
     )
   ) {
-    console.log("go ahead and submit");
+    console.log(Object.fromEntries(new FormData(e.target)));
   }
 });
