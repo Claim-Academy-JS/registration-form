@@ -60,12 +60,20 @@ toggleBtn.addEventListener("click", toggleFormInfo);
  */
 document.querySelector("form").addEventListener("submit", (e) => {
   e.preventDefault();
-  const test = new FormData(e.target);
+
   inputs.forEach((input) => {
     if (!input.value.length) {
       input.nextElementSibling?.classList.add("is-visible");
     }
   });
 
-  console.log(test, "hello");
+  // Only proceed with 'submission' if there are no 'error p'
+  if (
+    !e.target.querySelector(
+      // CSS Selector for a p with '.is-visible' if it's immediately after an 'input'
+      "input + p.is-visible"
+    )
+  ) {
+    console.log("go ahead and submit");
+  }
 });
