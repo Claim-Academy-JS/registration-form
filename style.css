@@ -21,6 +21,11 @@ input {
   width: 100%;
 }
 
+input + p {
+  color: red;
+  margin: 4px 0 0 0;
+}
+
 input,
 button {
   border-radius: 4px;
@@ -147,7 +152,7 @@ button[type="submit"]:hover {
 }
 
 .is-visible {
-  display: initial;
+  display: block;
 }
 
 /* Keyframes */
