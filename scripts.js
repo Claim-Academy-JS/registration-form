@@ -55,8 +55,12 @@ inputs.forEach((input) => {
 
 toggleBtn.addEventListener("click", toggleFormInfo);
 
-document.querySelector("form").addEventListener("submit", (event) => {
-  event.preventDefault();
+/**
+ * Upon submission {fname: "am", lname: "al"}
+ */
+document.querySelector("form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const test = new FormData(e.target);
 
-  console.log(event.target.elements);
+  console.log(test, "hello");
 });
