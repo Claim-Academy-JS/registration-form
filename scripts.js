@@ -61,6 +61,11 @@ toggleBtn.addEventListener("click", toggleFormInfo);
 document.querySelector("form").addEventListener("submit", (e) => {
   e.preventDefault();
   const test = new FormData(e.target);
+  inputs.forEach((input) => {
+    if (!input.value.length) {
+      input.nextElementSibling?.classList.add("is-visible");
+    }
+  });
 
   console.log(test, "hello");
 });
